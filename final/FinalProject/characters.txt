@@ -1,0 +1,2 @@
+1,Swordsman,The Duke,100,25,50,True,1,25
+2,Wizard,Wizzy,80,15,60,True,1,25,2
