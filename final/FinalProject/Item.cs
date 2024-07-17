@@ -2,16 +2,13 @@ using System;
 
 public class Item
 {
-    public void UseItem()
+    public Item() {}
+    public void UseItem(Classtype player)
     {
-
-    }
-    public void GetItem()
-    {
-
-    }
-    public void DisplayItems()
-    {
-        
+        int healthRecovered = player.GetHealth() + (player.GetTotalHealth() / 5);
+        int actualHealthRecovered = healthRecovered - player.GetHealth();
+        player.SetHealth(healthRecovered);
+        Console.Write($"{player.GetName()} gained {actualHealthRecovered} HP. Press enter to continue. ");
+        Console.ReadLine();
     }
 }

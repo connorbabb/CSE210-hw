@@ -10,15 +10,14 @@ public class Program
         string user = "";
         UI ui = new UI();
 
-        while (user != "5")
+        while (user != "4")
         {
             Console.Clear();
             Console.WriteLine("Menu Options: ");
             Console.WriteLine("  1. Start Battle");
-            Console.WriteLine("  2. Display Loaded Characters");
-            Console.WriteLine("  3. Load Character");
-            Console.WriteLine("  4. Create Character");
-            Console.WriteLine("  5. Quit");
+            Console.WriteLine("  2. Display Characters");
+            Console.WriteLine("  3. Create Character");
+            Console.WriteLine("  4. Quit");
             Console.Write("Select a choice from the menu: ");
             user = Console.ReadLine();
             Console.WriteLine();
@@ -28,15 +27,13 @@ public class Program
                 ui.BattleSetUp();
                 Console.Write("Would you like to battle again?(yes/no) ");
                 string playAgain = Console.ReadLine();
-                if (playAgain == "yes")
+                while (playAgain == "yes")
                 {
                     ui.BattleSetUp();
+                    Console.Write("Would you like to battle again?(yes/no) ");
+                    playAgain = Console.ReadLine();
                 }
-                else
-                {
-                    break;
-                    // ui.OverwriteSave();
-                }
+                user = "4";
             }
             else if (user == "2")
             {
@@ -44,13 +41,9 @@ public class Program
             }
             else if (user == "3")
             {
-                ui.LoadCharacter();
-            }
-            else if (user == "4")
-            {
                 ui.CreateCharacter();
             }
-            else if (user == "5")
+            if (user == "4")
             {
                 Console.WriteLine("Exiting program.");
             }
