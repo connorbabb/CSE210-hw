@@ -37,7 +37,7 @@ public abstract class Classtype
         int chance = random.Next(3);
         if (chance == 0 || chance == 1)
         {
-            int damageDealt = attacker.GetAttack() * 2 - defender.GetDefense() * 2;
+            int damageDealt = attacker.GetAttack() * 2 - (defender.GetDefense() * 2 + defender.GetDefense()/5);
             return damageDealt;
         }
         else
