@@ -1,3 +1,3 @@
-Swordsman,The Duke,100,100,30,10,true,1,95
+Swordsman,The Duke,105,105,33,13,true,2,30
 Wizard,Wizzy,80,80,25,15,true,1,25,2
-Archer,Archy,80,80,25,15,true,1,0
+Archer,The Hawk,80,80,25,15,true,1,0
